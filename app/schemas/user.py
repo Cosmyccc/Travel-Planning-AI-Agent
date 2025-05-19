@@ -14,8 +14,6 @@ class UserCreate(UserBase):
 class UserUpdate(BaseModel):
     username: Optional[str]= None
     password: Optional[str]= None
-    travel_style: Optional[str]= None
-    budget_range: Optional[str]= None
 
 class UserPreferences(BaseModel):
     travel_style: Optional[str]
@@ -27,4 +25,4 @@ class UserResponse(BaseModel):
     is_active: bool
     created_at: datetime
     updated_at: Optional[datetime]=None
-    # preferences: UserPreferences
+    preferences: UserPreferences
